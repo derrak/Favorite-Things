@@ -1,17 +1,19 @@
 $(document).ready(function() {
   $("#form").submit(function(event){
     event.preventDefault();
-    const fav1 = $("#favorites1").val();
-    const fav2 = $("#favorites2").val();
-    const fav3 = $("#favorites3").val();
+    const fav1 = $("#item1").val().toUpperCase();
+    const fav2 = $("#item2").val().toUpperCase();
+    const fav3 = $("#item3").val().toUpperCase();
 
     const favArray = [fav1, fav2, fav3];
-    const newArray = [];
-    newArray.push(favArray[1],favArray[0],favArray[2]);
 
-    $(".favorite2").append(newArray[0]);
-    $(".favorite1").append(newArray[1]);
-    $(".favorite3").append(newArray[2]);
+    favArray.sort();
+
+    favArray.forEach(function(item) {
+    $("ul").append("<li>"+item+"</li>");
+    });
+    
+    $(".dataEntry").css("display","none");
   });
 }); 
 
