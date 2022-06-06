@@ -1,4 +1,5 @@
-.dataEntry {
-  display: show;
+.classWaitingToBeApplied {
+  display: none;
+  background-color: blueviolet;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-

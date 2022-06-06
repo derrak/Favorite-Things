@@ -13,7 +13,11 @@ $(document).ready(function() {
     $("ul").append("<li>"+item+"</li>");
     });
     
-    $(".dataEntry").css("display","none");
+    //works
+    //$(".dataEntry").css("display","none");
+
+    $(".dataEntry").addClass("classWaitingToBeApplied");
+
   });
 }); 
 
